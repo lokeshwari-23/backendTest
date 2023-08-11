@@ -1,0 +1,26 @@
+a)db.list.find({ "property_type": "House" })
+
+
+b)db.list.aggregate([
+  {
+     $match: {
+        "price": { $gt: 500 }
+     }
+  },
+  {
+     $project: {
+        "listing_url": 1,
+        "name": 1,
+        "host_name": 1,
+        "host_location": 1,
+        "reviewer_name": 1,
+        "price": 1,
+        "_id": 0
+     }
+  }
+])
+
+c)db.list.find({
+   "address.country": "Brazil",
+   "review_scores.review_scores_rating": { $gte: 9 }
+})
