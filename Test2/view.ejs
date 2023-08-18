@@ -1,0 +1,8 @@
+<h2>database</h2>
+    <ul>
+        <%element.forEach((val)=>{%>
+           <%for(let ele in val){%>
+                <li><%=(ele +" : " +val[ele])%></li>
+            <%}%>
+        <%})%>
+    </ul>

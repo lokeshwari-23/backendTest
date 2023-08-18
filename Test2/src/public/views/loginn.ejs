@@ -1,0 +1,17 @@
+<form action="/process_login" method="post">
+
+    <%if(locals.error){%>
+    <p><%=error%></p>
+    
+    <%}%>
+    
+    <div>
+    
+    <input type="text" name="username" placeholder="Enter Username">
+    
+    <input type="password" name="password">
+    
+    <input type="submit" value="Login">
+    
+    </div>
+    </form>
