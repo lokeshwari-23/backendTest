@@ -1,0 +1,17 @@
+<%rep.map((value)=>{%>
+    <h1><%=value.name%></h1>
+    <h1><%=value.seats%></h1>
+    <h1><%=value.travel%></h1>
+    <h1><%=value.price%></h1>
+    
+    <form action="/edit" method="post" >
+        <input type="hidden" name="names" value="<%=value.name%>">
+        <button type="edit">edit</button>
+    </form>
+    
+    <form action="/delete" method="post" >
+        <input type="hidden" name="names" value="<%=value.name%>">
+        <button type="delete">delete</button>
+    </form>
+    <%})%>
+    
